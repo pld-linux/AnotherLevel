@@ -1,14 +1,14 @@
-Summary: A customized configuration of the fvwm2 window manager.
-Name: AnotherLevel
-Version: 0.9
-Release: 1
-Copyright: distributable
-Group: User Interface/Desktops
-Source: AnotherLevel-0.9.tar.gz
-Requires: m4, fvwm2, fvwm2-icons, wmconfig > 0.3, redhat-logos
+Summary:	A customized configuration of the fvwm2 window manager.
+Name:		AnotherLevel
+Version:	0.9
+Release:	1
+Copyright:	distributable
+Group:		User Interface/Desktops
+Source:		AnotherLevel-0.9.tar.gz
+Requires:	m4, fvwm2, fvwm2-icons, wmconfig > 0.3, redhat-logos
+BuildRoot:	/tmp/%{name}-%{version}-root
+Obsoletes:	TheNextLevel
 BuildArchitectures: noarch
-BuildRoot: /var/tmp/AnotherLevel-root
-Obsoletes: TheNextLevel
 
 %description 
 AnotherLevel is a custom configuration of the popular fvwm2
@@ -29,26 +29,27 @@ user.
 echo "No build necessary"
 
 %install
+rm -rf $RPM_BUILD_ROOT
 TOPDIR=$RPM_BUILD_ROOT make install
-mkdir -p $RPM_BUILD_ROOT/etc/X11/TheNextLevel
+install -d $RPM_BUILD_ROOT/etc/X11/TheNextLevel
 ln -sf ../AnotherLevel/fvwm2rc.m4 \
 	$RPM_BUILD_ROOT/etc/X11/TheNextLevel/.fvwm2rc.m4
 
-mkdir -p $RPM_BUILD_ROOT/etc/X11/gdm/Sessions
-install -m 755 AnotherLevel.session \
+install -d $RPM_BUILD_ROOT/etc/X11/gdm/Sessions
+install AnotherLevel.session \
 	$RPM_BUILD_ROOT/etc/X11/gdm/Sessions/AnotherLevel
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
-%defattr(-,root,root)
+%defattr(644,root,root,755)
 %doc Sample.Xmodmap
 %dir /etc/X11/AnotherLevel
 %config /etc/X11/AnotherLevel/*
 /etc/X11/TheNextLevel
-/etc/X11/gdm/Sessions/AnotherLevel
+%attr(755,root,root) /etc/X11/gdm/Sessions/AnotherLevel
 /usr/share/icons/*.xpm
 /usr/share/icons/mini/*.xpm
 /usr/man/*/*
 /usr/X11R6/bin/*
-
-%clean
-rm -rf $RPM_BUILD_ROOT
