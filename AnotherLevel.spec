@@ -52,8 +52,6 @@ install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/gdm/Sessions
 install AnotherLevel.session \
 	$RPM_BUILD_ROOT%{_sysconfdir}/X11/gdm/Sessions/AnotherLevel
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
