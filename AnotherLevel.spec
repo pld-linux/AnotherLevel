@@ -46,9 +46,9 @@ install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/TheNextLevel
 ln -sf ../AnotherLevel/fvwm2rc.m4 \
 	$RPM_BUILD_ROOT%{_sysconfdir}/X11/TheNextLevel/.fvwm2rc.m4
 
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/gdm/Sessions
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/xdm/Sessions
 install AnotherLevel.session \
-	$RPM_BUILD_ROOT%{_sysconfdir}/gdm/Sessions/AnotherLevel
+	$RPM_BUILD_ROOT%{_sysconfdir}/X11/xdm/Sessions/AnotherLevel
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_sysconfdir}/X11/AnotherLevel
 %config %{_sysconfdir}/X11/AnotherLevel/*
 %{_sysconfdir}/X11/TheNextLevel
-%attr(755,root,root) %{_sysconfdir}/gdm/Sessions/AnotherLevel
+%attr(755,root,root) %{_sysconfdir}/X11/xdm/Sessions/AnotherLevel
 %{_datadir}/icons/*.xpm
 %{_datadir}/icons/mini/*.xpm
 %{_mandir}/man1/*
