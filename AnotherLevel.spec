@@ -5,13 +5,12 @@ Version:	0.9
 Release:	1
 License:	distributable
 Group:		X11/Window Managers
-Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	ddeb447d0bf8aeca5bb1cf30878b4d55
+Source0:	%{name}-%{version}.tar.gz
 Requires:	m4, fvwm2, fvwm2-icons, wmconfig > 0.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	TheNextLevel
 BuildArch:	noarch
-
 
 %description
 AnotherLevel is a custom configuration of the popular fvwm2 window
@@ -37,9 +36,11 @@ Grega J. Bradosa, która wygra³a Red Hat Desktop Contest w 1996 roku.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install TOPDIR=$RPM_BUILD_ROOT \
+%{__make} install \
+	TOPDIR=$RPM_BUILD_ROOT \
 	ICONDIR=%{_datadir}/icons \
-	MANDIR=%{_mandir}/man1
+	MANDIR=%{_mandir}/man1 \
+	BINDIR=%{_bindir}
 
 install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/TheNextLevel
 ln -sf ../AnotherLevel/fvwm2rc.m4 \
