@@ -11,8 +11,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	TheNextLevel
 BuildArch:	noarch
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		/usr/X11R6/man
 
 %description
 AnotherLevel is a custom configuration of the popular fvwm2 window
