@@ -6,6 +6,7 @@ Release:	1
 License:	distributable
 Group:		X11/Window Managers
 Source0:	%{name}-%{version}.tar.gz
+# Source0-md5:	ddeb447d0bf8aeca5bb1cf30878b4d55
 Requires:	m4, fvwm2, fvwm2-icons, wmconfig > 0.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	TheNextLevel
