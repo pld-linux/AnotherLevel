@@ -42,7 +42,7 @@ echo "No build necessary"
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install TOPDIR=$RPM_BUILD_ROOT \
+%{__make} install TOPDIR=$RPM_BUILD_ROOT \
 	ICONDIR=%{_datadir}/icons \
 	MANDIR=%{_mandir}/man1
 
