@@ -26,6 +26,15 @@ Contest.
 AnotherLevel is designed to be easily configured by the 
 user.
 
+%descritpion -l pl
+AnotherLevel jest u¿yteczn± konfiguracj± popularnego zarz±dcy
+okien, jakim jest fvwm2. Fvwm oznacza (?) wirtualnego zarz±dcê
+okien. Zamiast znaku zapytania mo¿na dopisaæ: szybki, elastyczny,
+przyjazny i fantastyczny - wszystko to pasowa³oby do niego. Ten
+zarz±dca okien bazuje na konfiguracji pulpitu w stylu TheNextLevel 
+stworzonej przez Grega J. Bradosa, która wygra³a Red Hat Desktop
+Contest w 1996 roku.
+
 %prep
 %setup -c -q
 
