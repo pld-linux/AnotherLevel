@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	TOPDIR=$RPM_BUILD_ROOT \
-	ICONDIR=%{_datadir}/icons \
+	ICONDIR=%{_pixmapsdir} \
 	MANDIR=%{_mandir}/man1 \
 	BINDIR=%{_bindir}
 
@@ -63,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %config %{_sysconfdir}/X11/AnotherLevel/*
 %{_sysconfdir}/X11/TheNextLevel
 %attr(755,root,root) %{_sysconfdir}/X11/xdm/Sessions/AnotherLevel
-%{_datadir}/icons/*.xpm
-%{_datadir}/icons/mini/*.xpm
+%{_pixmapsdir}/*.xpm
+%{_pixmapsdir}/mini/*.xpm
 %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/*
