@@ -7,7 +7,7 @@ Group:		X11/Window Managers
 Group(pl):	X11/Zarz±dcy Okien
 Source:		AnotherLevel-0.9.tar.gz
 Requires:	m4, fvwm2, fvwm2-icons, wmconfig > 0.3
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	TheNextLevel
 BuildArchitectures: noarch
 
