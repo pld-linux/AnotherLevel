@@ -3,12 +3,16 @@ Name:		AnotherLevel
 Version:	0.9
 Release:	1
 Copyright:	distributable
-Group:		User Interface/Desktops
+Group:		X11/Window Managers
+Group(pl):	X11/Zarz±dcy okien
 Source:		AnotherLevel-0.9.tar.gz
-Requires:	m4, fvwm2, fvwm2-icons, wmconfig > 0.3, redhat-logos
+Requires:	m4, fvwm2, fvwm2-icons, wmconfig > 0.3
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	TheNextLevel
 BuildArchitectures: noarch
+
+%define		_prefix	/usr/X11R6
+%define		_mandir	/usr/X11R6/man
 
 %description 
 AnotherLevel is a custom configuration of the popular fvwm2
@@ -30,7 +34,11 @@ echo "No build necessary"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-TOPDIR=$RPM_BUILD_ROOT make install
+
+make install TOPDIR=$RPM_BUILD_ROOT \
+	ICONDIR=%{_datadir}/icons \
+	MANDIR=%{_mandir}/man1
+
 install -d $RPM_BUILD_ROOT/etc/X11/TheNextLevel
 ln -sf ../AnotherLevel/fvwm2rc.m4 \
 	$RPM_BUILD_ROOT/etc/X11/TheNextLevel/.fvwm2rc.m4
@@ -38,6 +46,8 @@ ln -sf ../AnotherLevel/fvwm2rc.m4 \
 install -d $RPM_BUILD_ROOT/etc/X11/gdm/Sessions
 install AnotherLevel.session \
 	$RPM_BUILD_ROOT/etc/X11/gdm/Sessions/AnotherLevel
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/X11/AnotherLevel/*
 /etc/X11/TheNextLevel
 %attr(755,root,root) /etc/X11/gdm/Sessions/AnotherLevel
-/usr/share/icons/*.xpm
-/usr/share/icons/mini/*.xpm
-/usr/man/*/*
-/usr/X11R6/bin/*
+%{_datadir}/icons/*.xpm
+%{_datadir}/icons/mini/*.xpm
+%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/*
