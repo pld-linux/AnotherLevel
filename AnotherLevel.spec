@@ -4,7 +4,7 @@ Version:	0.9
 Release:	1
 Copyright:	distributable
 Group:		X11/Window Managers
-Group(pl):	X11/Zarz±dcy okien
+Group(pl):	X11/Zarz±dcy Okien
 Source:		AnotherLevel-0.9.tar.gz
 Requires:	m4, fvwm2, fvwm2-icons, wmconfig > 0.3
 BuildRoot:	/tmp/%{name}-%{version}-root
