@@ -10,7 +10,6 @@ Source0:	%{name}-%{version}.tar.gz
 Requires:	fvwm2
 Requires:	fvwm2-icons
 Requires:	m4
-Requires:	wmconfig > 0.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	TheNextLevel
 BuildArch:	noarch
