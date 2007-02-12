@@ -1,5 +1,5 @@
 Summary:	A customized configuration of the fvwm2 window manager
-Summary(pl.UTF-8):   Użyteczna konfiguracja zarządcy okien fvwm2
+Summary(pl.UTF-8):	Użyteczna konfiguracja zarządcy okien fvwm2
 Name:		AnotherLevel
 Version:	0.9
 Release:	3
