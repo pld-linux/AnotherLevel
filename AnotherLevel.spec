@@ -1,5 +1,5 @@
 Summary:	A customized configuration of the fvwm2 window manager
-Summary(pl):	U¿yteczna konfiguracja zarz±dcy okien fvwm2
+Summary(pl.UTF-8):   UÅ¼yteczna konfiguracja zarzÄ…dcy okien fvwm2
 Name:		AnotherLevel
 Version:	0.9
 Release:	3
@@ -25,13 +25,13 @@ Desktop Contest.
 
 AnotherLevel is designed to be easily configured by the user.
 
-%description -l pl
-AnotherLevel jest u¿yteczn± konfiguracj± popularnego zarz±dcy okien,
-jakim jest fvwm2. Fvwm oznacza (?) wirtualnego zarz±dcê okien. Zamiast
-znaku zapytania mo¿na dopisaæ: szybki, elastyczny, przyjazny i
-fantastyczny - wszystko to pasowa³oby do niego. Ten zarz±dca okien
+%description -l pl.UTF-8
+AnotherLevel jest uÅ¼ytecznÄ… konfiguracjÄ… popularnego zarzÄ…dcy okien,
+jakim jest fvwm2. Fvwm oznacza (?) wirtualnego zarzÄ…dcÄ™ okien. Zamiast
+znaku zapytania moÅ¼na dopisaÄ‡: szybki, elastyczny, przyjazny i
+fantastyczny - wszystko to pasowaÅ‚oby do niego. Ten zarzÄ…dca okien
 bazuje na konfiguracji pulpitu w stylu TheNextLevel stworzonej przez
-Grega J. Bradosa, która wygra³a Red Hat Desktop Contest w 1996 roku.
+Grega J. Bradosa, ktÃ³ra wygraÅ‚a Red Hat Desktop Contest w 1996 roku.
 
 %prep
 %setup -c -q
