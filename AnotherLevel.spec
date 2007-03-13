@@ -5,8 +5,8 @@ Version:	0.9
 Release:	3
 License:	distributable
 Group:		X11/Window Managers
-# Source0-md5:	ddeb447d0bf8aeca5bb1cf30878b4d55
 Source0:	%{name}-%{version}.tar.gz
+# Source0-md5:	ddeb447d0bf8aeca5bb1cf30878b4d55
 BuildRequires:	sed >= 4.0
 Requires:	fvwm2
 Requires:	fvwm2-icons
